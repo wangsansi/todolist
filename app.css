@@ -1,0 +1,130 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+h1,h2,h3,p,span,li,ul,input {
+	font-family: 'Songti SC', 'STIX' ,serif;
+}
+ul li {
+	list-style: none;
+}
+a,a:hover {
+	text-decoration: none;
+	color: black;
+}
+.page-top,
+.page-content {
+	height: 150px;
+}
+.page-content {
+	display:flex;
+	justify-content:center;
+}
+.page-content h2 {
+	font-family:Georgia;
+	color:rgb(206, 46, 255);
+	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), color-stop(40%, rgba(0, 0, 0, 0.91)),to(rgba(0, 0, 0, 0.83)));
+	font-size: 80px;
+	padding-top: 60px;
+	position:relative;
+}
+.page-content h2:after{
+	position:absolute;
+	left:0px;
+	content:"Todo List";
+	color:rgba(247, 44, 44, 0.97);
+	-webkit-mask-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.32)), color-stop(40%, rgba(0, 0, 0, 0.48)),to(rgb(0, 0, 0)));
+}
+.main {
+	width: 56%;
+	margin: 0 auto;
+}
+.action a {
+	margin: 0 8px;
+}
+.action a.active {
+	border: 1px solid #ee4a7e;
+    padding: 2px
+}
+input.task-input {
+	font-size: 22px;
+	width: 98%;
+	padding-left: 10px;
+	height: 2em;
+	margin-top: 20px;
+}
+.completed label {
+	text-decoration: line-through;
+	color: #777777;
+}
+.task-count {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.tasks {
+	margin-top:20px;
+}
+.big-title {
+	margin-top: 20px;
+}
+.todo {
+	font-size: 22px;
+	line-height: 2em;
+	margin: 10px;
+	border-bottom: 1px solid #f1f1f1;
+}
+.view {
+	height: 46px;	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.destroy {
+	color: #e41616;
+	font-size: 26px;
+	border: 1px solid transparent;
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
+	margin-right: 20px;
+}
+.word {
+	display: flex;
+	align-items: center;
+}
+li.editing .view {
+	display: none;
+}
+li.editing input {
+	margin-left:34px;
+	outline:none;
+	display: block;
+	height: 42px;
+	font-size:22px;
+}
+input.edit {
+	display: none;
+}
+input.show {
+	display: block;
+}
+.todo-list li .toggle {
+    text-align: center;
+    outline: none;
+    /* auto, since non-WebKit browsers doesn't support input styling */
+    height: auto;    
+    margin: auto 0;
+    border: none; /* Mobile Safari */
+    -webkit-appearance: none;
+    appearance: none;
+}
+.toggle:after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 -28 100 135"><circle cx="50" cy="50" r="40" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
+    /* padding-top: 6px; */
+}
+
+.toggle:checked:after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 -28 100 135"><circle cx="50" cy="50" r="40" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
+    /* margin-top: 6px; */
+}
