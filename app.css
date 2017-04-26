@@ -126,7 +126,6 @@ input.show {
 	display: block;
 }
 .todo-list li .toggle {
-    text-align: center;
     outline: none;
     height: auto;    
     margin: auto 0;
@@ -136,14 +135,10 @@ input.show {
 }
 .toggle:after {
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 -28 100 135"><circle cx="50" cy="50" r="40" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
-	outline: none;
-    background-color: transparent;
 }
 
 .toggle:checked:after {
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 -28 100 135"><circle cx="50" cy="50" r="40" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');   
-	outline: none;
-    background-color: transparent;
 }
 @media screen and (max-width: 1024px) {
 	.main {
