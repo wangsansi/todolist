@@ -117,6 +117,7 @@ li.editing input {
 	outline:none;
 	display: block;
 	height: 42px;
+	width:80%;
 	font-size:22px;
 }
 input.edit {
