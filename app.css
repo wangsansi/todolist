@@ -38,20 +38,36 @@ a,a:hover {
 .main {
 	width: 56%;
 	margin: 0 auto;
+	position: relative;
 }
 .action a {
 	margin: 0 8px;
 }
 .action a.active {
-	border: 1px solid #ee4a7e;
-    padding: 2px
+	background-color: rgba(243, 43, 43, 0.82);
+    color: white;
+    padding: 2px;
 }
 input.task-input {
+	outline: none;
 	font-size: 22px;
 	width: 98%;
 	padding-left: 10px;
 	height: 2em;
 	margin-top: 20px;
+}
+.btn-input {
+	cursor: pointer;
+	outline: none;
+	color: #43b0f7;
+    font-size: 35px;
+    background: transparent;
+    border-color: transparent;
+    right: 17px;
+    top: 45px;
+    position: absolute;
+    height: 44px;
+    width: 44px;
 }
 .completed label {
 	text-decoration: line-through;
@@ -112,7 +128,6 @@ input.show {
 .todo-list li .toggle {
     text-align: center;
     outline: none;
-    /* auto, since non-WebKit browsers doesn't support input styling */
     height: auto;    
     margin: auto 0;
     border: none; /* Mobile Safari */
@@ -121,10 +136,51 @@ input.show {
 }
 .toggle:after {
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 -28 100 135"><circle cx="50" cy="50" r="40" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
-    /* padding-top: 6px; */
+	outline: none;
+    background-color: transparent;
 }
 
 .toggle:checked:after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 -28 100 135"><circle cx="50" cy="50" r="40" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
-    /* margin-top: 6px; */
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 -28 100 135"><circle cx="50" cy="50" r="40" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');   
+	outline: none;
+    background-color: transparent;
+}
+@media screen and (max-width: 1024px) {
+	.main {
+		width:90%
+	}
+	label {
+		padding-left:26px;
+	}
+	.btn-input {
+	cursor: pointer;
+	outline: none;
+	color: #43b0f7;
+    font-size: 35px;
+    background: transparent;
+    border-color: transparent;
+    right: 17px;
+    top: 48px;
+    position: absolute;
+    height: 44px;
+    width: 44px;
+	}
+	.toggle:after {
+	    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 -28 100 135"><circle cx="50" cy="50" r="40" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
+		outline: none;
+	    background-color: transparent;
+	}
+
+	.toggle:checked:after {
+	    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 -28 100 135"><circle cx="50" cy="50" r="40" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');   
+		outline: none;
+	    background-color: transparent;
+	}
+	.todo-list li .toggle {
+	    outline: none;
+	    background-color: transparent;
+	    /* Mobile Safari */
+	    -webkit-appearance: none;
+	    appearance: none;
+	}
 }

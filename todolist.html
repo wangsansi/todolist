@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>	
+	<title>todolist</title>	
 	<script type="text/javascript" src="vue.js"></script>  
 	<link rel="stylesheet" type="text/css" href="app.css">
+	<link rel="shortcut icon" href="icon.png" >
 </head>
 <body>
 	<div class="page-top">
@@ -21,11 +22,12 @@
 			v-model="things"
 			@keyup.enter="addTodo"
 		/>
+		<input class="btn-input" type="button" @click="addTodo" value="+" />
 		<ul class="task-count" v-show="list.length">
 			<li>
 				{{unCheckedLength}}个任务未完成</li>
 			<li class="action">
-				<a :class="{active: visibility == 'all'}" href="#all">所有任务</a>
+				<a :class="{active: visibility !== 'unfinished' && visibility !== 'finished'}" href="#all">所有任务</a>
 				<a :class="{active: visibility == 'unfinished'}"href="#unfinished">未完成任务</a>
 				<a :class="{active: visibility == 'finished'}"href="#finished">完成任务</a>
 			</li>
