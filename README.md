@@ -1,6 +1,6 @@
 # todolist
 
-vue学习
+学习Vue框架，写了一个todo list的网页
 
 截图如下
 
